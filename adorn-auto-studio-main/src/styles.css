@@ -1,0 +1,156 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--gold);
+  --color-gold-glow: var(--gold-glow);
+
+  --font-display: "Playfair Display", "Cormorant Garamond", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Luxury dark base */
+  --background: oklch(0.12 0.005 270);
+  --foreground: oklch(0.97 0.005 80);
+
+  --card: oklch(0.16 0.008 270);
+  --card-foreground: oklch(0.97 0.005 80);
+
+  --popover: oklch(0.14 0.008 270);
+  --popover-foreground: oklch(0.97 0.005 80);
+
+  /* Gold primary */
+  --primary: oklch(0.78 0.14 75);
+  --primary-foreground: oklch(0.12 0.005 270);
+
+  --secondary: oklch(0.22 0.01 270);
+  --secondary-foreground: oklch(0.97 0.005 80);
+
+  --muted: oklch(0.2 0.008 270);
+  --muted-foreground: oklch(0.7 0.01 80);
+
+  --accent: oklch(0.72 0.18 50);
+  --accent-foreground: oklch(0.12 0.005 270);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.3 0.01 80 / 0.25);
+  --input: oklch(0.25 0.008 270);
+  --ring: oklch(0.78 0.14 75);
+
+  --gold: oklch(0.82 0.16 80);
+  --gold-glow: oklch(0.7 0.2 55);
+}
+
+.dark {
+  --background: oklch(0.12 0.005 270);
+  --foreground: oklch(0.97 0.005 80);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #050505;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255, 200, 120, 0.12);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+
+@utility gold-text {
+  background: linear-gradient(135deg, #f5d27a 0%, #e8a447 50%, #c97824 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-border-glow {
+  box-shadow:
+    0 0 0 1px rgba(232, 164, 71, 0.25),
+    0 20px 60px -20px rgba(232, 164, 71, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+@utility section-pad {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.animate-pulse-ring { animation: pulse-ring 2s infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(232,164,71,0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Subtle grain */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
