@@ -5,6 +5,7 @@ import { About } from "@/components/site/About";
 import { Products } from "@/components/site/Products";
 import { Videos } from "@/components/site/Videos";
 import { Gallery } from "@/components/site/Gallery";
+import { Feedback } from "@/components/site/Feedback";
 import { Location } from "@/components/site/Location";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
@@ -70,6 +71,7 @@ function Index() {
       <Products />
       <Videos />
       <Gallery />
+      <Feedback />
       <Location />
       <Contact />
       <Footer />

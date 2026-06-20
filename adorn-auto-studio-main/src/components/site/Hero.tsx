@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import hero from "@/assets/hero.jpg";
 import { SITE } from "@/data/site";
 
@@ -67,7 +68,7 @@ export function Hero() {
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-7 py-4 rounded-full glass text-white hover:bg-white/10 transition-all"
           >
-            <MessageCircle className="h-4 w-4" />
+            <WhatsAppIcon className="h-4 w-4" />
             WhatsApp Inquiry
           </a>
         </motion.div>

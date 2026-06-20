@@ -1,4 +1,5 @@
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { NAV, SITE } from "@/data/site";
 
 export function Footer() {
@@ -62,7 +63,7 @@ export function Footer() {
               aria-label="WhatsApp"
               className="h-11 w-11 rounded-full glass grid place-items-center hover:gold-border-glow transition-all"
             >
-              <MessageCircle className="h-4 w-4 text-amber-400" />
+              <WhatsAppIcon className="h-4 w-4 text-amber-400" />
             </a>
           </div>
           <div className="mt-6 text-sm text-white/60">

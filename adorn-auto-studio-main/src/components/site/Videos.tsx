@@ -77,9 +77,6 @@ export function Videos() {
                       <Play className="h-5 w-5 ml-0.5 text-white group-hover:text-black" fill="currentColor" />
                     </div>
                   </div>
-                  <div className="absolute bottom-3 left-3 right-3 text-xs font-medium text-white/90">
-                    {v.title}
-                  </div>
                 </>
               )}
             </motion.div>

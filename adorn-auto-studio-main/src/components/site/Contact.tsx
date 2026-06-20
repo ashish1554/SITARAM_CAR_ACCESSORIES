@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { SITE } from "@/data/site";
 
 export function Contact() {
@@ -78,7 +79,7 @@ export function Contact() {
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-to-r from-amber-300 to-orange-500 text-black font-semibold hover:scale-[1.03] transition-transform"
           >
-            <MessageCircle className="h-4 w-4" /> WhatsApp Now
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp Now
           </a>
         </div>
       </div>

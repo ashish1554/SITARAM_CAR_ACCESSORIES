@@ -5,11 +5,11 @@ const FEATURES = [
   { icon: ShieldCheck, title: "Premium Quality", desc: "Only certified, top-grade accessories." },
   { icon: Wrench, title: "Expert Installation", desc: "Trained technicians, precision fit." },
   { icon: Sparkles, title: "Latest Accessories", desc: "Always stocked with new arrivals." },
-  { icon: Heart, title: "Customer Satisfaction", desc: "1000+ delighted drivers across Ahmedabad." },
+  { icon: Heart, title: "Customer Satisfaction", desc: "100+ delighted drivers across Ahmedabad." },
 ];
 
 const STATS = [
-  { k: "1000+", v: "Happy Customers" },
+  { k: "100+", v: "Happy Customers" },
   { k: "Premium", v: "Products" },
   { k: "Expert", v: "Service" },
 ];
